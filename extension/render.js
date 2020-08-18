@@ -29,7 +29,7 @@ async function render() {
 
     // fetch folders
     try {
-        const res = await fetchFiles(urlHost);
+        const res = await fetchFolder(urlHost);
         renderList(res, '/', files);
     } catch (err) {
         files.innerHTML = `<p id="message-dss-1524">Erro ao buscar os Arquivos.<br/>Verifique a rota: <a target="_blank" href="${urlHost}/${localStorage.getItem(
@@ -56,7 +56,7 @@ async function fetchFolder(url) {
         const newPath = prompt(
             'Informe o caminho do arquivo: Exemplo list_dir.php. (obj: Sem a url raiz)'
         );
-        if (!newPath) {
+        if (!!newPath) {
             localStorage.setItem('path', newPath);
             return await fetchFolder(url);
         }
@@ -71,7 +71,7 @@ async function reloadList(selector) {
         const res = await fetchFolder(urlHost);
         renderList(res, '/', selector);
     } catch (err) {
-        selector.innerHTML = `<p id="message-dss-1524">Erro ao atualizar os Arquivos.<br/>Verifique a rota: <a target="_blank" href="${urlHost}/${localStorage.getItem(
+        selector.innerHTML = `<p id="message-dss-1524">Erro ao atualizar os Arquivos.<br/>Verifique a rota: <a id="links-dss-1524" target="_blank" href="${urlHost}/${localStorage.getItem(
             'path'
         )}">${urlHost}/${localStorage.getItem('path')}</a></p>`;
     }
