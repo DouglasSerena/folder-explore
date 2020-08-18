@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "name": "folder explore",
+    "name": "folder explorer",
     "author": "Douglas Serena",
     "description": "Navegador de arquivos.",
     "version": "1.0",
