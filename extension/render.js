@@ -49,7 +49,7 @@ async function render() {
     };
 }
 
-// fc fetch folders
+// FC fetch folders
 async function fetchFolder(url) {
     let path = localStorage.getItem('path');
     if (!path) {
