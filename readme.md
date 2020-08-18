@@ -44,5 +44,6 @@ echo json_encode(listDir(__DIR__));
 
 ### Observação
 
--   A rota deve ser list_dir, ex de rota http://localhost/list_dir.php / http://localhost/list_dir
--   Funcionamento somente em localhost;
+-   Funcionamento somente em localhost.
+-   versions esta a extensão ja comprimida para usar.
+-   O arquivo php esta no repositor ja configurado.
