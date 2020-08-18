@@ -1,31 +1,8 @@
-const urlHost = window.location.origin;
+const urlHost = window.location.origin; // 'http://localhost:8080';
 
-async function fetchFiles(url) {
-    let path = localStorage.getItem('path');
-    if (!path) {
-        const newPath = prompt(
-            'Informe o caminho do arquivo: Exemplo list_dir.php. (obj: Sem a url raiz)'
-        );
-        localStorage.setItem('path', newPath);
-        return await fetchFiles(url);
-    } else {
-        const res = await fetch(`${url}/${path}`).then((res) => res.json());
-        return res;
-    }
-}
-
-async function reloadList(selector) {
-    try {
-        const res = await fetchFiles(urlHost);
-        renderList(res, '/', selector);
-    } catch (err) {
-        selector.innerHTML = `<p id="message-dss-1524">Erro ao atualizar os Arquivos.<br/>Verifique a rota: <a target="_blank" href="${urlHost}/${localStorage.getItem(
-            'path'
-        )}">${urlHost}/${localStorage.getItem('path')}</a></p>`;
-    }
-}
-
+// render start
 async function render() {
+    // create elements
     const body = document.querySelector('body');
     const root = document.createElement('div');
     const files = document.createElement('div');
@@ -33,18 +10,24 @@ async function render() {
     const reload = document.createElement('span');
     const path = document.createElement('span');
     const controller = document.createElement('div');
+
+    // add attributes
     controller.setAttribute('id', 'controller-dss-1524');
     menu.setAttribute('id', 'menu-dss-1524');
     reload.setAttribute('id', 'reload-dss-1524');
     path.setAttribute('id', 'path-dss-1524');
     files.setAttribute('id', 'files-dss-1524');
     root.setAttribute('id', 'root-dss-1524');
+
+    // add body page
     menu.append(reload);
     menu.append(path);
     root.append(files);
     root.append(controller);
     root.append(menu);
     body.append(root);
+
+    // fetch folders
     try {
         const res = await fetchFiles(urlHost);
         renderList(res, '/', files);
@@ -53,6 +36,8 @@ async function render() {
             'path'
         )}">${urlHost}/${localStorage.getItem('path')}</a></p>`;
     }
+
+    // return elements
     return {
         body,
         root,
@@ -62,6 +47,34 @@ async function render() {
         reload,
         path,
     };
+}
+
+// fc fetch folders
+async function fetchFolder(url) {
+    let path = localStorage.getItem('path');
+    if (!path) {
+        const newPath = prompt(
+            'Informe o caminho do arquivo: Exemplo list_dir.php. (obj: Sem a url raiz)'
+        );
+        if (!newPath) {
+            localStorage.setItem('path', newPath);
+            return await fetchFolder(url);
+        }
+    } else {
+        const res = await fetch(`${url}/${path}`).then((res) => res.json());
+        return res;
+    }
+}
+
+async function reloadList(selector) {
+    try {
+        const res = await fetchFolder(urlHost);
+        renderList(res, '/', selector);
+    } catch (err) {
+        selector.innerHTML = `<p id="message-dss-1524">Erro ao atualizar os Arquivos.<br/>Verifique a rota: <a target="_blank" href="${urlHost}/${localStorage.getItem(
+            'path'
+        )}">${urlHost}/${localStorage.getItem('path')}</a></p>`;
+    }
 }
 
 function renderList(files, path, selector) {

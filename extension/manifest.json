@@ -2,8 +2,8 @@
     "manifest_version": 2,
     "name": "folder explorer",
     "author": "Douglas Serena",
-    "description": "Navegador de arquivos.",
-    "version": "1.0",
+    "description": "Navegador de arquivos, esta extensão foi criado para navegar em pastas e visualizar arquivos com caminho muito complicado de achar.",
+    "version": "2.0",
     "browser_action": {
         "default_icon": "icon.png"
     },

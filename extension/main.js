@@ -1,9 +1,14 @@
 window.onload = async () => {
     if (window.location.hostname == 'localhost') {
+        // render folder start
         const elements = await render();
+
+        // start icons
         elements.reload.innerHTML = icons['reload']('currentColor');
         elements.path.innerHTML = icons['recycle']('currentColor');
         elements.controller.innerHTML = icons['folder']('currentColor');
+
+        // toggle class folder controller
         elements.controller.addEventListener('click', (event) => {
             elements.controller.classList.toggle('open-dss-1524');
             elements.root.classList.toggle('open-dss-1524');
@@ -15,6 +20,8 @@ window.onload = async () => {
                       'currentColor'
                   ));
         });
+
+        //  open / close body
         elements.root.addEventListener('click', (event) => {
             if (event.target.id === 'folder-dss-1524') {
                 event.target.classList.toggle('open-dss-1524');
@@ -27,13 +34,17 @@ window.onload = async () => {
                       ).innerHTML = icons['folder']('currentColor'));
             }
         });
+
+        // reload folder
+        elements.reload.addEventListener('click', reload);
         async function reload() {
             elements.reload.classList.add('start-reload-dss-1524');
             elements.files.innerHTML = '';
             await reloadList(elements.files);
             elements.reload.classList.remove('start-reload-dss-1524');
         }
-        elements.reload.addEventListener('click', reload);
+
+        // reset routes
         elements.path.addEventListener('click', async () => {
             const path = prompt(
                 'Informe o caminho do arquivo: Exemplo list_dir.php. (obj: Sem a url raiz)'

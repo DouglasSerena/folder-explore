@@ -1,0 +1,68 @@
+/* scroll */
+#root-dss-1524::-webkit-scrollbar-track {
+    background: #282a36;
+
+    border-radius: 8px;
+}
+#root-dss-1524::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+
+    background: #282a36;
+    border-radius: 8px;
+}
+#root-dss-1524::-webkit-scrollbar-thumb {
+    background: #bdbaba;
+    border-radius: 8px;
+}
+#root-dss-1524::-webkit-scrollbar-corner {
+    background: #282a36;
+}
+
+/* body */
+#root-dss-1524 {
+    position: fixed;
+    top: 0;
+    left: -310px;
+    z-index: calc(1040 * 1040);
+
+    width: 300px;
+    height: 100%;
+
+    padding: 25px 5px 50px;
+
+    background: #282a36;
+
+    overflow: auto;
+    transition: 250ms linear;
+}
+#root-dss-1524 * {
+    font-family: 'Roboto', sans-serif;
+}
+#root-dss-1524.open-dss-1524 {
+    left: 0 !important;
+}
+
+/* folder */
+#controller-dss-1524 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: calc(1000 * 1000);
+
+    width: 25px;
+    height: 25px;
+
+    border-top-right-radius: 8px;
+    color: #f8f8f2;
+    background: #282a36;
+
+    cursor: pointer;
+    transition: 250ms linear;
+}
+#controller-dss-1524.open-dss-1524 {
+    left: 310px !important;
+}

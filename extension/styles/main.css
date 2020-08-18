@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('./styles/body.css');
+@import url('./styles/menu.css');
+@import url('./styles/folder.css');
+@import url('./styles/files.css');
+
+#icons {
+    width: 60%;
+    height: 60%;
+
+    object-position: center;
+}
+
+#folder-dss-1524 + div {
+    position: relative;
+    transform: translateX(-500%);
+
+    padding-left: 0;
+    height: 0;
+
+    opacity: 0;
+
+    transition-delay: height 150ms;
+    transition: 100ms;
+}
+#folder-dss-1524.open-dss-1524 + div {
+    opacity: 1;
+
+    height: auto;
+    padding: 0 10px;
+
+    transform: translateX(0);
+}
+#folder-dss-1524.open-dss-1524 + div::after {
+    content: '';
+
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 3px;
+
+    width: 1px;
+
+    background: #44475a;
+}
+#folder-dss-1524.open-dss-1524 + div a:last-child {
+    margin-bottom: 5px;
+}
+
+#message-dss-1524 {
+    color: red;
+    text-transform: uppercase;
+
+    margin-top: 10px;
+}
+#message-dss-1524 a {
+    text-transform: lowercase;
+}
