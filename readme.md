@@ -9,7 +9,7 @@
 <h3  align="center">Descrição</h3>
 <p  align="center">O uso dessa extensão é para trabalhar com o back para consegui fazer uma navegação pelos diretório direto do navegador</p>
 <p align="center">
-    <img src="./use-extension.gif" width="600">
+    <img src="./extension-use.gif" width="600">
 </p>
         
 ### Uso
@@ -17,7 +17,7 @@
     Deve haver uma rota da api disponibilizando so diretórios em formato de json.
     Os Diretórios deve ser um vetor e os arquivos um string dentro dessa array.
 
-- Para adicionar ao seu navegar entre em gerenciador de extensão e ative a opção 'Modo do desenvolvedor' e carregue a pasta da extensão em 'Carregar sem compactação'.
+-   Para adicionar ao seu navegar entre em gerenciador de extensão e ative a opção 'Modo do desenvolvedor' e carregue a pasta da extensão em 'Carregar sem compactação'.
 
 ```php
 // Exemplo com php
