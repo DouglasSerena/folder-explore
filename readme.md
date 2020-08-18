@@ -11,6 +11,7 @@
 <p align="center">
     <img src="./use-extension.gif" width="600">
 </p>
+        
 ### Uso
 
     Deve haver uma rota da api disponibilizando so diretórios em formato de json.
