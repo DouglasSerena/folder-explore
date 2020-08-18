@@ -1,4 +1,4 @@
-<div style="text-align: center;">
+<div align="center">
     <h1 style="margin: 0;">Folder Explore</h1>
     <h6 style="margin: 0;">Extensão para navegadores<h3>
     <div>
@@ -6,14 +6,9 @@
         <img src="https://img.shields.io/badge/language-css-cyan" />
     </div>
 </div>
-<h3 style="text-align: center;">Descrição</h3>
-<p style="text-align: center;">O uso dessa extensão é para trabalhar com o back para consegui fazer uma navegação pelos diretório direto do navegador</p>
-
-<div style="display: flex;justify-content: center;align-items: center;">
-    <img style="padding: 10px;border-radius: 15px;background: #ddd;height: 400px;" src="./folderClose.png" />
-    <img style="padding: 10px;border-radius: 15px;background: #ddd;height: 400px;margin-left: 10px;" src="./folderOpen.png" />
-</div>
-
+<h3  align="center">Descrição</h3>
+<p  align="center">O uso dessa extensão é para trabalhar com o back para consegui fazer uma navegação pelos diretório direto do navegador</p>
+        
 ### Uso
 
     Deve haver uma rota da api disponibilizando so diretórios em formato de json.
