@@ -8,7 +8,9 @@
 </div>
 <h3  align="center">Descrição</h3>
 <p  align="center">O uso dessa extensão é para trabalhar com o back para consegui fazer uma navegação pelos diretório direto do navegador</p>
-        
+<p align="center">
+    <img src="./use-extension.gif" width="600">
+</p>
 ### Uso
 
     Deve haver uma rota da api disponibilizando so diretórios em formato de json.
