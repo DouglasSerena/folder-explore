@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+#root-dss-1524::-webkit-scrollbar-track {
+    background: #282a36;
+    border-radius: 8px;
+}
+#root-dss-1524::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background: #282a36;
+    border-radius: 8px;
+}
+#root-dss-1524::-webkit-scrollbar-thumb {
+    background: #bdbaba;
+    border-radius: 8px;
+}
+#root-dss-1524::-webkit-scrollbar-corner {
+    background: #282a36;
+}
+
+#root-dss-1524 {
+    position: fixed;
+    top: 0;
+    left: -21vw;
+    width: 20vw;
+    height: 100%;
+    padding: 25px 0 50px;
+    z-index: calc(1040 * 1040);
+    background: #282a36;
+    padding-left: 5px;
+    overflow: auto;
+    transition: 250ms linear;
+}
+#root-dss-1524 * {
+    font-family: 'Roboto', sans-serif;
+}
+#controller-dss-1524 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    border-top-right-radius: 8px;
+    z-index: calc(1000 * 1000);
+    background: #282a36;
+    color: #f8f8f2;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 250ms linear;
+}
+#root-dss-1524.open-dss-1524 {
+    left: 0 !important;
+}
+#controller-dss-1524:hover {
+    color: #bc96f5;
+}
+#controller-dss-1524.open-dss-1524 {
+    color: #bc96f5;
+    left: 20vw !important;
+}
+
+#icons {
+    width: 60%;
+    height: 60%;
+    object-position: center;
+}
+#menu-dss-1524 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 0 0 5px;
+    width: 100%;
+    height: 20px;
+}
+#menu-dss-1524::before {
+    content: 'Folder Explore';
+    font-size: 18px;
+    color: #f8f8f2;
+    font-weight: bold;
+}
+/* reload */
+#menu-dss-1524 #reload-dss-1524 {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    color: #f8f8f2;
+    transition: 300ms linear;
+}
+#menu-dss-1524 #reload-dss-1524:hover {
+    color: #bc96f5;
+}
+#menu-dss-1524 #reload-dss-1524.start-reload-dss-1524 {
+    animation: 300ms reload-move-dss-1524 infinite linear;
+}
+@keyframes reload-move-dss-1524 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* path */
+#menu-dss-1524 #path-dss-1524 {
+    position: absolute;
+    top: 5px;
+    right: 40px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    color: #f8f8f2;
+    transition: 300ms linear;
+}
+#menu-dss-1524 #path-dss-1524:hover {
+    color: #bc96f5;
+}
+/* res */
+#folder-dss-1524 {
+    position: relative;
+    padding: 2.5px 5px 0 40px;
+    margin: 0;
+    border-radius: 30px;
+    font-weight: bold;
+    color: #f8f8f2;
+    cursor: pointer;
+    transition: 200ms linear;
+}
+#folder-dss-1524 #arrow-icon-dss-1524 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-30%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    transition: 200ms linear;
+}
+#folder-dss-1524 #folder-icon-dss-1524 {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-30%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    transition: 200ms linear;
+}
+#folder-dss-1524.open-dss-1524 #arrow-icon-dss-1524 {
+    transform: translate(-40%, -30%) rotate(90deg);
+}
+#folder-dss-1524.open-dss-1524 {
+    color: #bc96f5 !important;
+}
+#folder-dss-1524:hover {
+    color: #bc96f5;
+}
+#folder-dss-1524 + div {
+    position: relative;
+    padding-left: 0;
+    opacity: 0;
+    height: 0;
+    transform: translateX(-500%);
+    transition-delay: height 150ms;
+    transition: 100ms;
+}
+#folder-dss-1524.open-dss-1524 + div {
+    opacity: 1;
+    height: auto;
+    padding: 0 10px;
+    transform: translateX(0);
+}
+#folder-dss-1524.open-dss-1524 + div::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 3px;
+    width: 1px;
+    background: #44475a;
+}
+#folder-dss-1524.open-dss-1524 + div a:last-child {
+    margin-bottom: 5px;
+}
+#links-dss-1524 {
+    position: relative;
+    display: block;
+    padding: 2.5px 0 0 40px;
+    margin: 0;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #f8f8f2;
+    cursor: pointer;
+    transition: 100ms linear;
+}
+#links-dss-1524:hover {
+    color: #bc96f5;
+}
+#links-dss-1524 #links-icon-dss-1524 {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-30%);
+    width: 25px;
+    height: 25px;
+    pointer-events: none;
+    transition: transform 200ms linear;
+}
+
+#message-dss-1524 {
+    color: red;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+#message-dss-1524 a {
+    text-transform: lowercase;
+}
