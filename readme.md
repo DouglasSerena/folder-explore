@@ -1,5 +1,5 @@
 <div align="center">
-    <h1 style="margin: 0;">Folder Explore</h1>
+    <h1 style="margin: 0;">Folder Explorer</h1>
     <h6 style="margin: 0;">Extensão para navegadores<h3>
     <div>
         <img src="https://img.shields.io/badge/language-javascript-yellow" />
