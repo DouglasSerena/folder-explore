@@ -40,5 +40,4 @@ echo json_encode(listDir(__DIR__));
 ### Observação
 
 -   Funcionamento somente em localhost.
--   versions esta a extensão ja comprimida para usar.
--   O arquivo php esta no repositor ja configurado.
+-   O arquivo php esta no repositor, ja configurado.
