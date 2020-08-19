@@ -1,6 +1,6 @@
 <?php
 
-$rootDir = __DIR__;
+$rootDir = "/var/www/html";
 
 function listFolder($path)
 {
