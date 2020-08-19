@@ -30,11 +30,11 @@ async function render() {
     // fetch folders
     try {
         const res = await fetchFolder(urlHost);
-        renderList(res, '/', files);
+        renderList(res, '', files);
     } catch (err) {
         files.innerHTML = `<p id="message-dss-1524">Erro ao buscar os Arquivos.<br/>Verifique a rota: <a target="_blank" href="${urlHost}/${localStorage.getItem(
             'path'
-        )}">${urlHost}/${localStorage.getItem('path')}</a></p>`;
+        )}">${urlHost}/${localStorage.getItem('path')}></a></p>`;
     }
 
     // return elements
@@ -69,11 +69,11 @@ async function fetchFolder(url) {
 async function reloadList(selector) {
     try {
         const res = await fetchFolder(urlHost);
-        renderList(res, '/', selector);
+        renderList(res, '', selector);
     } catch (err) {
         selector.innerHTML = `<p id="message-dss-1524">Erro ao atualizar os Arquivos.<br/>Verifique a rota: <a id="links-dss-1524" target="_blank" href="${urlHost}/${localStorage.getItem(
             'path'
-        )}">${urlHost}/${localStorage.getItem('path')}</a></p>`;
+        )}">${urlHost}/${localStorage.getItem('path')}></a></p>`;
     }
 }
 
@@ -82,7 +82,7 @@ function renderList(files, path, selector) {
     files.forEach((file) => {
         if (typeof file === 'string') {
             filesFilter.push(
-                `<a target="_blank" id="links-dss-1524" href="${urlHost}/${path}/${file}"><span id="links-icon-dss-1524">${icons[
+                `<a target="_blank" id="links-dss-1524" href="${urlHost}${path}/${file}"><span id="links-icon-dss-1524">${icons[
                     file.split('.').pop()
                 ]('currentColor')}</span>${file}</a>`
             );
