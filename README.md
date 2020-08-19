@@ -18,6 +18,7 @@
     Os Diretórios deve ser um vetor e os arquivos um string dentro dessa array.
 
 -   Para adicionar ao seu navegar entre em gerenciador de extensão e ative a opção 'Modo do desenvolvedor' e carregue a pasta da extensão em 'Carregar sem compactação'.
+-   A rota deve ser informada sem a url raiz, abrira um prompt para informar a rota e por exemplo a rota seja http://localhost:8080/list_dir/list.php você informara somente a parte do caminho como list_dir/list.php.
 
 ```php
 // Exemplo com php
