@@ -1,0 +1,29 @@
+#links-dss-1524 {
+    display: block;
+    position: relative;
+
+    padding: 2.5px 0 0 40px;
+    margin: 0;
+
+    text-decoration: none;
+    font-weight: 400;
+    color: #f8f8f2;
+    cursor: pointer;
+
+    transition: 100ms linear;
+}
+#links-dss-1524:hover {
+    background: #44475a;
+}
+#links-dss-1524 #links-icon-dss-1524 {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+
+    transform: translateY(-27%);
+
+    width: 30px;
+    height: 30px;
+
+    pointer-events: none;
+}

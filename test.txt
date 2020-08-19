@@ -1,0 +1,2 @@
+Bom dia, fiz uma extensão para navegação nos diretórios do apache, porque estou usando o docker e não tava conseguindo navegar pelos diretórios por causa de permissão, no repositório tem um arquivo PHP já configurado se quiserem usar a extensão, não consegui publicar na loja da google porque tinha que pagar 5 dores, se quiserem testa e tiverem algum problema pode chamar que posso ajudar.
+https://github.com/DouglasSerena/folder-explorer

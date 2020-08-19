@@ -1,0 +1,42 @@
+#folder-dss-1524 {
+    position: relative;
+
+    padding: 2.5px 5px 0 40px;
+    margin: 0;
+
+    font-weight: bold;
+    color: #f8f8f2;
+
+    cursor: pointer;
+    transition: 200ms linear;
+}
+#folder-dss-1524 #arrow-icon-dss-1524 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-25%);
+
+    width: 25px;
+    height: 25px;
+
+    pointer-events: none;
+    transition: 200ms linear;
+}
+#folder-dss-1524 #folder-icon-dss-1524 {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-25%);
+
+    width: 25px;
+    height: 25px;
+
+    pointer-events: none;
+    transition: 200ms linear;
+}
+#folder-dss-1524.open-dss-1524 #arrow-icon-dss-1524 {
+    transform: translate(-50%, -20%) rotate(90deg);
+}
+#folder-dss-1524:hover {
+    background: #44475a;
+}

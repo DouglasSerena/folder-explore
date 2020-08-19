@@ -1,0 +1,40 @@
+version: '3.3'
+
+services:
+    apache:
+        build: .
+        container_name: php
+        working_dir: /var/www/html
+        ports:
+            - '8080:80'
+        volumes:
+            - ./www/:/var/www/html
+        depends_on:
+            - db
+        networks:
+            - app-network
+
+    db:
+        image: mysql:latest
+        container_name: mysql
+        ports:
+            - '3306:3306'
+        volumes:
+            - ./database:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: 123
+            MYSQL_DATABASE: database
+        networks:
+            - app-network
+
+    workbench:
+        image: phpmyadmin/phpmyadmin
+        container_name: phpmyadmin
+        ports:
+            - '8081:80'
+        networks:
+            - app-network
+
+networks:
+    app-network:
+        driver: bridge

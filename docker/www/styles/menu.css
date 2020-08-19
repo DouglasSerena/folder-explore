@@ -1,0 +1,50 @@
+#menu-dss-1524 {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 20px;
+
+    padding: 5px 0 0 5px;
+}
+#menu-dss-1524::before {
+    content: 'Folder Explorer';
+
+    font-size: 18px;
+    font-weight: bold;
+
+    color: #fff;
+}
+
+/* reload */
+#menu-dss-1524 #reload-dss-1524 {
+    position: absolute;
+    top: 0;
+    right: 10px;
+
+    width: 15px;
+    height: 15px;
+
+    padding: 5px;
+    border-radius: 50%;
+
+    color: #f8f8f2;
+
+    cursor: pointer;
+    transition: 300ms linear;
+}
+#menu-dss-1524 #reload-dss-1524:hover {
+    background: #44475a;
+}
+#menu-dss-1524 #reload-dss-1524.start-reload-dss-1524 {
+    animation: 300ms reload-move-dss-1524 infinite linear;
+}
+@keyframes reload-move-dss-1524 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
